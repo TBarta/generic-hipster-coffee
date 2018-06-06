@@ -1,0 +1,162 @@
+$navGray: #F8F9FA;
+$grayText: #F8F9FA - #999999;
+$darkBlue: #31373E;
+$h1Size: 3rem;
+$h2Size: 2.5rem;
+$h3Size: 2rem;
+$primaryFont : "abel";
+
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    font-family: $primaryFont;
+    display: flex;
+    flex-direction: column;
+    color: $grayText;
+    margin: 0 auto;
+section {
+    margin: 0 auto;
+    padding: 10px 15px 250px 15px;
+}
+
+
+    nav {
+        background-color: $navGray;
+        width: 100%;
+        display: flex;
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .navInner {
+            width: 100%;
+            margin: 5px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+                height: 120px;
+                margin: 0 auto;
+            }
+            .navMenu {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                padding: 10px 20px;
+                color: $grayText;
+                a:nth-child(2) {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    
+    .sections {
+        display: flex;
+        flex-flow: column wrap;
+        h1 {
+            font-size: $h1Size;
+        }
+        .menu_box {
+        
+
+            .menu_section {
+                display: flex;
+                justify-content: space-between;
+                h2 {
+                    font-size: $h2Size;
+                    width: 100%;
+                }
+
+                .drink {
+                    flex-direction: column;
+                }
+                .price {
+                    flex-direction: column;
+                        }
+                }
+        }
+    }
+
+    footer {
+        margin: 0;
+        background-color: $darkBlue;
+        min-height: 200px;
+        padding: 0px 15px 20px 15px;
+        display: flex;
+        flex-wrap: wrap;
+        color: $navGray;
+        justify-content: center;
+        img {
+            margin: -160px 0 40px 0;
+            height: 200px;
+        }
+        .navMenu {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 5rem;
+        }
+        
+        a {
+            color: #419BF9; 
+        }
+        #active {
+            text-decoration: none;
+            color: $navGray;
+            font-weight: bold;
+        }
+    }
+    
+}
+
+@media only screen and (min-width: 620px) {
+    .container {
+        section {
+            width: 60%;
+            padding: 10px 15px 350px 15px;
+        }
+        nav {
+            .navInner {
+                width: 60%;
+                flex-direction: row;
+                justify-content: space-between;
+                img {
+                    margin: 0;
+                }
+                .navMenu {
+                    flex-basis: 400px;
+                }
+            }
+        }
+        .sections {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+
+            .menu_box {
+                width: 40%;
+                margin: 0 1.5rem;
+            }
+        }
+        footer {
+            flex-direction: column;
+            align-items: center;
+            .navMenu {
+                width: 25%;
+            }
+            img {
+                margin: -300px 0 50px 0;
+                max-width: 800px;
+                height: unset;
+                max-height: unset;
+            }
+        }
+    }
+}
